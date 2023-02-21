@@ -10,9 +10,11 @@
     "prepare": "husky install"
   },
   "lint-staged": {
-    "**/*.(ts|tsx)": "yarn tsc --noEmit",
-    "**/*.(ts|tsx|js)": "yarn prettier --write  && yarn eslint --fix ",
-    "**/*.(md|json)": "yarn prettier --write"
+    "**/*.(ts|tsx)": [
+      "yarn tsc --noEmit",
+      "yarn prettier --write . && yarn eslint --fix"
+    ],
+    "**/*.(md|json)": "yarn prettier --write ."
   },
   "prettier": "@imjustlucas/prettier-config",
   "dependencies": {
