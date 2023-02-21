@@ -11,7 +11,8 @@
   },
   "lint-staged": {
     "**/*.(ts|tsx)": [
-      "yarn prettier --write . && yarn eslint --fix"
+      "yarn prettier --write .",
+      "yarn eslint --fix"
     ],
     "**/*.(md|json)": "yarn prettier --write ."
   },
