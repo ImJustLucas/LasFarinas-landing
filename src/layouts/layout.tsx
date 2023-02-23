@@ -1,5 +1,7 @@
 import styled from 'styled-components'
 
+import { FarineHeader } from '@components/FarineHeader'
+
 type LayoutProps = {
   children: React.ReactNode
 }
@@ -7,7 +9,8 @@ type LayoutProps = {
 export const Layout = ({ children }: LayoutProps) => {
   return (
     <LayoutContainer>
-      <main className="content">{children}</main>
+      <FarineHeader />
+      <main>{children}</main>
     </LayoutContainer>
   )
 }
